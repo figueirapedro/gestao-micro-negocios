@@ -39,9 +39,17 @@ public class RegisterController {
 
     @FXML
     public void handleCriar() throws Exception {
-        dataAccessor = new UserDAO("remotemysql.com", "8BqaG7Joaq", "KZHhe6stfM");
+        dataAccessor = new UserDAO("jdbc:mysql://remotemysql.com:3306/8BqaG7Joaq?zeroDateTimeBehavior=convertToNull", "8BqaG7Joaq", "KZHhe6stfM");
         dataAccessor.createPerson(name.getText(), email.getText(), password.getText());
-        mainApp.showLogin();
+        
+        if(dataAccessor.ValidateUser(name.getText(), email.getText(), password.getText()))
+            mainApp.showLogin();
+        else{
+            name.setText("Não foi possível cadastrar");
+            email.setText("");
+            password.setText("");
+        }
+            
     }
 
     public void stop() throws Exception {

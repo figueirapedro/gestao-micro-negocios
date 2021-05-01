@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="649.0" prefWidth="1087.0" styleClass="background" stylesheets="@Theme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestao.micro.negocios.view.RegisterController">
+   <children>
+      <Button layoutX="471.0" layoutY="391.0" mnemonicParsing="false" onAction="#handleCriar" text="Cadastrar" />
+      <Button layoutX="341.0" layoutY="391.0" mnemonicParsing="false" onAction="#handleVoltar" text="Voltar" />
+      <PasswordField fx:id="password" layoutX="432.0" layoutY="325.0" prefHeight="32.0" prefWidth="198.0" />
+      <TextField fx:id="name" layoutX="428.0" layoutY="154.0" prefHeight="32.0" prefWidth="198.0" />
+      <Label layoutX="428.0" layoutY="122.0" text="Nome" />
+      <Label layoutX="429.0" layoutY="206.0" text="Email" />
+      <Button layoutX="630.0" layoutY="391.0" mnemonicParsing="false" onAction="#handleLimpar" text="Limpar" />
+      <Label layoutX="433.0" layoutY="297.0" text="Senha" />
+      <Label id="#title" layoutX="483.0" layoutY="59.0" text="Registrar-se">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <TextField fx:id="email" layoutX="431.0" layoutY="244.0" prefHeight="32.0" prefWidth="198.0" />
+   </children>
+</AnchorPane>
